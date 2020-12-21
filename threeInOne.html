@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Temperature Converter</title>
+        <link rel="stylesheet" href="../cssfiles/main.css">
+        <link rel="stylesheet" href="../cssfiles/tempIndex.css">
+        <link rel="stylesheet" href="../cssfiles/bmi.css">
+        <link rel="stylesheet" href="../cssfiles/calculator.css">
+
+    </head>
+    <body>
+        <main class="container">
+            <div class="content">
+
+                <section class="temp-converter">
+                    <header class="temp-header">
+                        <h2>Temperature Converter</h2>
+                    </header>
+                    <div class="input-div">
+                        <input class="temp-input" id="celcius" type="number" name="celcius" placeholder="Celcius">
+                        <input class="temp-input" id="fahrenheit" type="number" name="fahrenheit" placeholder="Fahrenheit">
+                        <input class="temp-input" id="kelvin" type="number" name="kelvin" placeholder="Kelvin">
+                    </div>
+                </section>
+
+                <section class="bmi-calculator">
+                    <header class="bmi-header">
+                        <h2>BMI Calculator</h2>
+                    </header>
+                    <div class="content-area">
+                        <div class="metric-selector-container">
+                            <label for="metric">
+                                <input type="radio" class="metric" name="metric" value="kilos" checked>Kg/m
+                                <input type="radio" class="metric" name="metric" value="pounds">Lbs/in
+                            </label>
+                        </div>
+                        <div class="metric-value-input">
+                            <input class="metric-value" type="number" id="Kg" name="weight" placeholder="weight...">
+                            <input class="metric-value" type="number" id="Lbs" name="height" placeholder="height...">
+                            <button class="bmi-button" id="bmi-button">Get BMI</button>
+                            <div id="display-bmi"></div>
+                        </div>
+                    </div>
+                    <footer>
+                        <div>
+                            <p id="display-output"></p>
+                        </div>
+                    </footer>
+                </section>
+
+                <section class="calculator">
+                    <header class="calc-header">
+                        <h2>Calculator</h2>
+                    </header>
+                    <article class="calc-body">
+                        <span class="top-display"></span>
+                        <input type="text" class="calc-input" id="calc-input" name="calc-input">
+                        <div class="calc-buttons">
+                            <button class="calc-button" id="cancel">C</button>
+                            <button class="calc-button" id="divide">/</button>
+                            <button class="calc-button" id="seven">7</button>
+                            <button class="calc-button" id="eight">8</button>
+                            <button class="calc-button" id="nine">9</button>
+                            <button class="calc-button" id="multiply">x</button>
+                            <button class="calc-button" id="four">4</button>
+                            <button class="calc-button" id="five">5</button>
+                            <button class="calc-button" id="six">6</button>
+                            <button class="calc-button" id="subtract">-</button>
+                            <button class="calc-button" id="one">1</button>
+                            <button class="calc-button" id="two">2</button>
+                            <button class="calc-button" id="three">3</button>
+                            <button class="calc-button" id="add">+</button>
+                            <button class="calc-button" id="dot">.</button>
+                            <button class="calc-button" id="zero">0</button>
+                            <button class="calc-button" id="equal">=</button>
+                        </div>
+                    </article>
+                </section>
+
+            </div>
+        </main>
+        <script src="../control/tempIndex.js"></script>
+        <script src="../control/calculator.js"></script>
+        <script src="../control/bmi.js"></script>
+    </body>
+
+</html>
