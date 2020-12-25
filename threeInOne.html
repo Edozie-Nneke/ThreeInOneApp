@@ -5,16 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Temperature Converter</title>
         <link rel="stylesheet" href="../cssfiles/main.css">
-        <link rel="stylesheet" href="../cssfiles/tempIndex.css">
-        <link rel="stylesheet" href="../cssfiles/bmi.css">
-        <link rel="stylesheet" href="../cssfiles/calculator.css">
-
     </head>
     <body>
         <main class="container">
-            <div class="content">
 
-                <section class="temp-converter">
+                <section class="section temp-converter">
                     <header class="temp-header">
                         <h2>Temperature Converter</h2>
                     </header>
@@ -25,7 +20,7 @@
                     </div>
                 </section>
 
-                <section class="bmi-calculator">
+                <section class="section bmi-calculator">
                     <header class="bmi-header">
                         <h2>BMI Calculator</h2>
                     </header>
@@ -43,20 +38,18 @@
                             <div id="display-bmi"></div>
                         </div>
                     </div>
-                    <footer>
-                        <div>
+                    <footer class="bmi-footer">
                             <p id="display-output"></p>
-                        </div>
                     </footer>
                 </section>
 
-                <section class="calculator">
+                <section class="section calculator">
                     <header class="calc-header">
                         <h2>Calculator</h2>
                     </header>
-                    <article class="calc-body">
-                        <span class="top-display"></span>
-                        <input type="text" class="calc-input" id="calc-input" name="calc-input">
+                    <div class="calc-body">
+                        <span id="top-display"></span>
+                        <input type="text" class="calc-input" id="calc-input" name="calc-input" value="5">
                         <div class="calc-buttons">
                             <button class="calc-button" id="cancel">C</button>
                             <button class="calc-button" id="divide">/</button>
@@ -76,12 +69,10 @@
                             <button class="calc-button" id="zero">0</button>
                             <button class="calc-button" id="equal">=</button>
                         </div>
-                    </article>
+                    </div>
                 </section>
-
-            </div>
         </main>
-        <script src="../control/tempIndex.js"></script>
+        <script src="./control/tempIndex.js"></script>
         <script src="../control/calculator.js"></script>
         <script src="../control/bmi.js"></script>
     </body>
