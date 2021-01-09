@@ -4,7 +4,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Temperature Converter</title>
-        <link rel="stylesheet" href="../cssfiles/main.css">
+        <link rel="stylesheet" href="./cssfiles/main.css">
+        <link rel="stylesheet" href="./cssfiles/bmi.css">
     </head>
     <body>
         <main class="container">
@@ -24,20 +25,22 @@
                     <header class="bmi-header">
                         <h2>BMI Calculator</h2>
                     </header>
-                    <div class="content-area">
-                        <div class="metric-selector-container">
-                            <label for="metric">
-                                <input type="radio" class="metric" name="metric" value="kilos" checked>Kg/m
-                                <input type="radio" class="metric" name="metric" value="pounds">Lbs/in
-                            </label>
+                    <form class="bmi-form">
+                        <div class="metric-selector">
+                            <input type="radio" id="kg" name="metric" value="kilos" checked>
+                            <label for="kg">UK Metric</label>
+
+                            <input type="radio" id="Lbs" name="metric" value="pounds">
+                            <label for="Lbs">US Standard</label>
                         </div>
-                        <div class="metric-value-input">
-                            <input class="metric-value" type="number" id="Kg" name="weight" placeholder="weight...">
-                            <input class="metric-value" type="number" id="Lbs" name="height" placeholder="height...">
-                            <button class="bmi-button" id="bmi-button">Get BMI</button>
+                        <div id="metric-value-input">
+                            <input class="metric-value" type="text" id="weight" name="kilogram" placeholder="Kilogram">
+                            <input class="metric-value" type="text" id="height" name="cm-feet" placeholder="Centimeters">
+                            <input class="metric-value" type="number" id="heightInInches" name="inches" min="1" max="12" placeholder="Inches">
                             <div id="display-bmi"></div>
+                            <button type="submit" id="bmi-button">Get BMI</button>
                         </div>
-                    </div>
+                    </form>
                     <footer class="bmi-footer">
                             <p id="display-output"></p>
                     </footer>
@@ -71,10 +74,11 @@
                         </div>
                     </div>
                 </section>
-        </main>
+            </main>
+
         <script src="./control/tempIndex.js"></script>
-        <script src="../control/calculator.js"></script>
-        <script src="../control/bmi.js"></script>
+        <script src="./control/calculator.js"></script>
+        <script src="./control/bmi.js"></script>
     </body>
 
 </html>
