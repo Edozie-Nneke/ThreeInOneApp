@@ -1,28 +1,26 @@
-
+// DECLARE VARIABLES
 const metric = document.getElementsByName('metric');
-const display = document.querySelector('#display-output');
 const getBMI = document.getElementById('bmi-button');
 const weight = document.getElementById('weight');
 const height = document.getElementById('height');
-const display_bmi = document.getElementById('display-bmi');
 const heightInInches = document.getElementById('heightInInches');
+const displayOutput = document.querySelector('#display-output');
+const display_bmi = document.getElementById('display-bmi');
 
-metric[0].addEventListener('click', e => {
-    console.log(metric[0].value)
+// EVENTLISTENERS FOR RADIO BUTTONS
+metric[0].addEventListener('click', ()=> {
     heightInInches.style.display = 'none';
     weight.setAttribute('placeholder', 'Kilograms')
     height.setAttribute('placeholder', 'Centimeters')
 }, false);
 
-metric[1].addEventListener('click', e => {
-    console.log(metric[1].value)
+metric[1].addEventListener('click', () => {
     weight.setAttribute('placeholder', 'Pounds')
     height.setAttribute('placeholder', 'Feet')
     heightInInches.style.display = 'inline-block';
 }, false);
 
-
-
+// EVENT LISTENER ON SUBMIT
 getBMI.addEventListener('click', e => {
     
     e.preventDefault();
@@ -42,21 +40,26 @@ getBMI.addEventListener('click', e => {
     }
 }, false);
 
-
+// FUNCTION TO HANDLE BMI LOGIC
 function outCome(bmiValue){
 
     if(bmiValue < 18.5){
         // Underweight
-        console.log('Underweight')
+        displayOutput.innerHTML = `Your BMI is: ${bmiValue.toFixed(2)}
+         and is below 18.5 which is a sign of being UNDERWEIGHT`;
     }else if(bmiValue > 18.5 && bmiValue <= 24.9){
         // Normal
-        console.log('Normal')
+        displayOutput.innerHTML = `Your BMI is: ${bmiValue.toFixed(2)}
+         and it falls between the NORMAL range of 18.5 to 24.9`
     }else if(bmiValue >= 25.0 && bmiValue <= 29.9){
         // Overweight
-        console.log('Overweight')
+        displayOutput.innerHTML = `Your BMI is: ${bmiValue.toFixed(2)}
+         and falls between the range of 25.0 and 29.9 which
+          is a sign of being OVERWEIGHT`;
     }else{
         // Obese
-        console.log('Obese')
+        displayOutput.innerHTML = `Your BMI is: ${bmiValue.toFixed(2)}
+         and this above 29.9 and puts you at risk of OBESITY`;
     }
 }
 
