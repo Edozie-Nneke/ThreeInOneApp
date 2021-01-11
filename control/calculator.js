@@ -1,7 +1,8 @@
-const top_display = document.getElementById('top-display');
-const calc_input = document.getElementById('calc-input');
 
-const calc_button = document.getElementsByClassName('calc-button');
+const topDisplay = document.getElementById('top-display');
+const calcInput = document.getElementById('calc-input');
+
+const calcButton = document.querySelectorAll('.calc-button');
 
 const cancel = document.getElementById('cancel');
 const divide = document.getElementById('divide');
@@ -21,6 +22,20 @@ const dot = document.getElementById('dot');
 const zero = document.getElementById('zero');
 const equal = document.getElementById('equal');
 
+
+// RESET CALULATOR INPUT
 cancel.addEventListener('click', () => {
-    
-})
+    calcInput.value = '0';  
+});
+
+// KEY INPUT
+for(let i = 0; i < calcButton.length; i++){
+    let specificButton = calcButton[i];
+
+    specificButton.addEventListener('click', e => {
+        calcInput.value = calcInput.value + specificButton.value;
+        console.log(specificButton.name);
+    })
+}
+
+
