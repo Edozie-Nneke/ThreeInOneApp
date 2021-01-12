@@ -1,6 +1,7 @@
 const celcius = document.getElementById('celcius');
 const fahrenheit = document.getElementById('fahrenheit');
 const kelvin = document.getElementById('kelvin');
+const clear = document.getElementById('clear');
 
 const tempInput = document.getElementsByClassName('temp-input');
 
@@ -35,3 +36,9 @@ for(let i = 0; i < tempInput.length; i++){
         }
     });
 }
+
+clear.addEventListener('click', () => {
+    celcius.value = '';
+    fahrenheit.value = '';
+    kelvin.value = '';
+}, false)
