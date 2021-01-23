@@ -28,56 +28,5 @@ cancel.addEventListener('click', () => {
   topDisplay.innerHTML = ''
 })
 
-// KEY INPUT
-for (let i = 0; i < calcButton.length; i++) {
-  let specificButton = calcButton[i]
-
-  specificButton.addEventListener('click', e => {
-    const nameOfSign = specificButton.name
-    /** Refractor to use chained if-else blocks to check all
-     * possible outcomes
-     */
-    switch (nameOfSign) {
-      case 'divide':
-        let divide = ''
-        if ([' X ', ' + ', ' - '].indexOf(calcInput.value)) {
-          return
-        } else {
-          divide = `${calcInput.value} /`
-          topDisplay.innerHTML = divide
-        }
-        break
-
-      case 'multiply':
-        let multiply = ''
-        multiply = `${calcInput.value} X`
-        topDisplay.innerHTML = multiply
-        break
-
-      case 'add':
-        let add = ''
-        add = `${calcInput.value} +`
-        topDisplay.innerHTML = add
-        break
-
-      case 'subtract':
-        let subtract = ''
-        subtract = `${calcInput.value} -`
-        topDisplay.innerHTML = subtract
-        break
-
-      default:
-        break
-    }
-    // if(['divide', 'multipy', 'add', 'subtract'].indexOf(nameOfSign) > -1){
-    //     let sign = '';
-    //         sign = `${calcInput.value} / `;
-    //         topDisplay.innerHTML = sign;
-    // }else{
-    if (calcInput.value === '0' && specificButton.value !== '.') {
-      calcInput.value = specificButton.value
-    } else {
-      calcInput.value = calcInput.value + specificButton.value
-    }
-  })
-}
+// KEY ACTIONS
+for (let i = 0; i < calcButton.length; i++) {}
