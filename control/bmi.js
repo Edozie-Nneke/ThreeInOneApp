@@ -15,6 +15,7 @@ metric[0].addEventListener(
     heightInInches.style.display = 'none'
     weight.setAttribute('placeholder', 'Kilograms')
     height.setAttribute('placeholder', 'Centimeters')
+    height.style.width = '80%'
   },
   false
 )
@@ -25,6 +26,8 @@ metric[1].addEventListener(
     weight.setAttribute('placeholder', 'Pounds')
     height.setAttribute('placeholder', 'Feet')
     heightInInches.style.display = 'inline-block'
+    height.style.width = '50%'
+    heightInInches.style.width = '28%'
   },
   false
 )

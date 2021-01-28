@@ -73,8 +73,9 @@ body {
 /* ================== BMI CALCULATOR ================= */
 .bmi-calculator {
   display: grid;
-  grid-template-rows: 1fr 2fr auto;
+  grid-template-rows: 1fr 2fr 1fr;
   grid-gap: 20px;
+  border: 1px solid yellow;
 }
 
 .bmi-header {
@@ -88,27 +89,71 @@ body {
   grid-template-rows: auto 1fr;
 }
 
-.metric-selector {
-  height: 20px;
-}
-
 .metric-value-input {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
-.metric-value {
+.metric-selector {
+  height: 50px;
+  margin: auto;
+  padding-left: 16px;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+#weight {
+  width: 80%;
+  margin-left: 10%;
+}
+
+#height {
+  width: 80%;
+  margin-top: 20px;
+  margin-left: 10%;
 }
 
 #heightInInches {
   display: none;
 }
 
+.metric-value {
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  margin: auto;
+  padding-left: 16px;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
 #display-bmi {
+  display: inline;
+  width: 20%;
+  height: 50px;
+  margin-top: 20px;
+  background: blue;
 }
 
 #bmi-button {
+  width: 60%;
+  height: 50px;
+  margin-left: 10%;
+  margin-top: 20px;
+  outline: none;
+  font-size: 1.2rem;
 }
 
 #clear-button {
+  width: 80%;
+  height: 50px;
+  margin-left: 10%;
+  margin-top: 50px;
+  outline: none;
+  box-shadow: 3px 3px 5px #ccc;
+  border-radius: 10px;
+  font-size: 1.2rem;
 }
 
 #bmi-footer {
