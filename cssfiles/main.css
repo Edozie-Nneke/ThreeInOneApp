@@ -73,18 +73,18 @@ body {
 /* ================== BMI CALCULATOR ================= */
 .bmi-calculator {
   display: grid;
+  background-color: #8ef6e4;
+  color: #1b262c;
   grid-template-rows: 1fr 2fr 1fr;
   grid-gap: 20px;
-  border: 1px solid yellow;
 }
 
 .bmi-header {
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid #1b262c;
   margin: auto;
 }
 
 .bmi-form {
-  border: 1px solid blue;
   display: grid;
   grid-template-rows: auto 1fr;
 }
@@ -122,27 +122,32 @@ body {
   border-radius: 10px;
   border: none;
   outline: none;
-  margin: auto;
+  /* margin: auto; */
   padding-left: 16px;
   font-size: 1.2rem;
   font-weight: 600;
 }
 
-#display-bmi {
-  display: inline;
-  width: 20%;
-  height: 50px;
-  margin-top: 20px;
-  background: blue;
+.button-display {
+  display: flex;
+  width: 80%;
+  margin-left: 10%;
 }
 
 #bmi-button {
-  width: 60%;
+  width: 70%;
   height: 50px;
-  margin-left: 10%;
   margin-top: 20px;
   outline: none;
   font-size: 1.2rem;
+}
+
+#display-bmi {
+  width: 30%;
+  height: 50px;
+  margin-top: 20px;
+  padding: 0 10px;
+  border: 1px solid green;
 }
 
 #clear-button {
@@ -156,11 +161,15 @@ body {
   font-size: 1.2rem;
 }
 
-#bmi-footer {
-  border: 1px solid yellow;
+.bmi-footer {
 }
 
 #display-output {
+  width: 90%;
+  margin: 0 auto;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 10px;
 }
 
 /* ==================== SIMPLE CALCULATOR ==================*/
