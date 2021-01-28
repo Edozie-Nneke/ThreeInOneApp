@@ -68,6 +68,8 @@ body {
   box-shadow: 3px 3px 5px #ccc;
   border-radius: 10px;
   font-size: 1.2rem;
+  font-weight: 600;
+  background-color: #f9ed69;
 }
 
 /* ================== BMI CALCULATOR ================= */
@@ -140,14 +142,17 @@ body {
   margin-top: 20px;
   outline: none;
   font-size: 1.2rem;
+  font-weight: 600;
+  background-color: #62d2a2;
 }
 
 #display-bmi {
   width: 30%;
   height: 50px;
   margin-top: 20px;
-  padding: 0 10px;
-  border: 1px solid green;
+  padding: 15px;
+  font-size: 1.1rem;
+  font-weight: 600;
 }
 
 #clear-button {
@@ -156,6 +161,8 @@ body {
   margin-left: 10%;
   margin-top: 50px;
   outline: none;
+  background-color: #9896f1;
+  font-weight: 600;
   box-shadow: 3px 3px 5px #ccc;
   border-radius: 10px;
   font-size: 1.2rem;
@@ -174,30 +181,42 @@ body {
 
 /* ==================== SIMPLE CALCULATOR ==================*/
 .calculator {
-  border: 1px solid #fff;
   display: grid;
   grid-template-rows: repeat(4, 1fr);
+  background-color: #930077;
 }
 
 .calc-header {
   margin: auto;
+  border-bottom: 1px solid #ffffff;
 }
 
 .calc-body {
-  border: 1px solid yellow;
   grid-row: 2/5;
+  position: relative;
+  width: 100%;
+  margin: auto;
 }
 
 #top-display {
   position: absolute;
+  color: #1b262c;
   top: 5px;
-  right: 5px;
+  right: 15px;
+  font-weight: 600;
+  opacity: 0.6;
 }
 
 #calc-input {
-  position: relative;
   width: 100%;
   height: 75px;
+  text-align: right;
+  padding-right: 10px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #930077;
+  border-radius: 5px;
+  margin-bottom: 5px;
 }
 
 .calc-button-container {
@@ -209,6 +228,9 @@ body {
 
 #cancel {
   grid-column: 1/4;
+  font-size: 1.5rem;
+  color: #930077;
+  border-radius: 5px;
 }
 
 #equal {
@@ -216,4 +238,7 @@ body {
 }
 
 .calc-button {
+  font-size: 1.5rem;
+  color: #930077;
+  border-radius: 5px;
 }
