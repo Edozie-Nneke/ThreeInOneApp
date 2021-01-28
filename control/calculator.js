@@ -21,7 +21,6 @@ const dot = document.getElementById('dot')
 const zero = document.getElementById('zero')
 const equal = document.getElementById('equal')
 
-console.log(calcInput)
 // RESET CALULATOR INPUT
 cancel.addEventListener('click', () => {
   calcInput.value = '0'
@@ -29,4 +28,21 @@ cancel.addEventListener('click', () => {
 })
 
 // KEY ACTIONS
-for (let i = 0; i < calcButton.length; i++) {}
+for (let i = 0; i < calcButton.length; i++) {
+  calcButton[i].addEventListener('click', () => {
+    const signs = [' / ', ' x ', ' - ', ' + ']
+    if (
+      signs.indexOf(calcButton[i].value) > -1 &&
+      calcInput.value.length >= 1
+    ) {
+      topDisplay.innerHTML = calcInput.value + calcButton[i].value
+    } else {
+      if (calcInput.value === '0' && calcButton[i].value !== '.') {
+        calcInput.value = ''
+        calcInput.value = calcInput.value + calcButton[i].value
+      } else {
+        calcInput.value = calcInput.value + calcButton[i].value
+      }
+    }
+  })
+}

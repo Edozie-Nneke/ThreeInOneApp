@@ -231,6 +231,7 @@ body {
   font-size: 1.5rem;
   color: #930077;
   border-radius: 5px;
+  outline: none;
 }
 
 #equal {
@@ -241,4 +242,5 @@ body {
   font-size: 1.5rem;
   color: #930077;
   border-radius: 5px;
+  outline: none;
 }
