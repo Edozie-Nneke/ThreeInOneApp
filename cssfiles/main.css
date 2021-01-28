@@ -174,24 +174,45 @@ body {
 
 /* ==================== SIMPLE CALCULATOR ==================*/
 .calculator {
+  border: 1px solid #fff;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
 }
 
 .calc-header {
+  margin: auto;
 }
 
 .calc-body {
+  border: 1px solid yellow;
+  grid-row: 2/5;
 }
 
 #top-display {
+  position: absolute;
+  top: 5px;
+  right: 5px;
 }
 
 #calc-input {
+  position: relative;
+  width: 100%;
+  height: 75px;
 }
 
 .calc-button-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(72px, auto);
+  grid-gap: 2px;
 }
 
 #cancel {
+  grid-column: 1/4;
+}
+
+#equal {
+  grid-column: 3/5;
 }
 
 .calc-button {
