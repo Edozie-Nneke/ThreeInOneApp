@@ -8,6 +8,13 @@ const clearBtn = document.getElementById('clear-button')
 const displayOutput = document.querySelector('#display-output')
 const display_bmi = document.getElementById('display-bmi')
 
+// CLEAR ALL INPUTS AND DISPLAY
+clearBtn.addEventListener('click', () => {
+  displayOutput.innerHTML = ''
+  weight.value = ''
+  height.value = ''
+})
+
 // EVENTLISTENERS FOR RADIO BUTTONS
 metric[0].addEventListener(
   'click',
@@ -80,22 +87,15 @@ function outCome(bmiValue) {
   } else if (bmiValue >= 25.0 && bmiValue <= 29.9) {
     // Overweight
     displayOutput.innerHTML = `Your BMI is: ${bmiValue.toFixed(2)}
-         and falls between the range of 25.0 and 29.9 which
-          is a sign of being OVERWEIGHT`
+         which falls between the range of 25.0 and 29.9 and indicative
+          of being OVERWEIGHT`
   } else if (bmiValue > 29.9) {
     // Obese
     displayOutput.innerHTML = `Your BMI is: ${bmiValue.toFixed(2)}
-         and this above 29.9 and puts you at risk of OBESITY`
+         and this is above 29.9 and puts you at risk of OBESITY`
   } else {
     displayOutput.innerHTML = `You have not inputed a value for your
     your weight and height. Please input a value or select your prefered
     metric and then input corresponding values.`
   }
 }
-
-// CLEAR ALL INPUTS AND DISPLAY
-clearBtn.addEventListener('click', () => {
-  displayOutput.innerHTML = ''
-  weight.value = ''
-  height.value = ''
-})

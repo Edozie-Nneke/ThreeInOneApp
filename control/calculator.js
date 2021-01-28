@@ -1,8 +1,6 @@
 const topDisplay = document.getElementById('top-display')
 const calcInput = document.getElementById('calc-input')
-
 const calcButton = document.querySelectorAll('.calc-button')
-
 const cancel = document.getElementById('cancel')
 const divide = document.getElementById('divide')
 const seven = document.getElementById('seven')
