@@ -40,16 +40,28 @@ getBMI.addEventListener(
 
     if (metric[0].checked) {
       let bmiKg
-      parseFloat((bmiKg = weight.value / (height.value / 100) ** 2))
-      display_bmi.innerHTML = bmiKg.toFixed(2)
-      outCome(bmiKg)
+      if (!weight.value && !height.value) {
+        bmiKg = 'NIL'
+        display_bmi.innerHTML = bmiKg
+        outCome(bmiKg)
+      } else {
+        parseFloat((bmiKg = weight.value / (height.value / 100) ** 2))
+        display_bmi.innerHTML = bmiKg.toFixed(2)
+        outCome(bmiKg)
+      }
     }
     if (metric[1].checked) {
       let bmiLbs, feetToinches
-      feetToinches = height.value * 12 + parseInt(heightInInches.value)
-      parseFloat((bmiLbs = (weight.value / feetToinches ** 2) * 703))
-      display_bmi.innerHTML = bmiLbs.toFixed(2)
-      outCome(bmiLbs)
+      if (!weight.value && !height.value) {
+        bmiLbs = 'NIL'
+        display_bmi.innerHTML = bmiLbs
+        outCome(bmiLbs)
+      } else {
+        feetToinches = height.value * 12 + parseInt(heightInInches.value)
+        parseFloat((bmiLbs = (weight.value / feetToinches ** 2) * 703))
+        display_bmi.innerHTML = bmiLbs.toFixed(2)
+        outCome(bmiLbs)
+      }
     }
   },
   false
@@ -70,10 +82,14 @@ function outCome(bmiValue) {
     displayOutput.innerHTML = `Your BMI is: ${bmiValue.toFixed(2)}
          and falls between the range of 25.0 and 29.9 which
           is a sign of being OVERWEIGHT`
-  } else {
+  } else if (bmiValue > 29.9) {
     // Obese
     displayOutput.innerHTML = `Your BMI is: ${bmiValue.toFixed(2)}
          and this above 29.9 and puts you at risk of OBESITY`
+  } else {
+    displayOutput.innerHTML = `You have not inputed a value for your
+    your weight and height. Please input a value or select your prefered
+    metric and then input corresponding values.`
   }
 }
 
