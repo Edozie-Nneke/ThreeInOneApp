@@ -2,12 +2,12 @@ const celcius = document.getElementById('celcius')
 const fahrenheit = document.getElementById('fahrenheit')
 const kelvin = document.getElementById('kelvin')
 const clear = document.getElementById('clear')
+const progress = document.getElementById('progress')
 
 const tempInput = document.getElementsByClassName('temp-input')
 
 for (let i = 0; i < tempInput.length; i++) {
   let enteredValue = tempInput[i]
-
   enteredValue.addEventListener('input', e => {
     let value = parseFloat(e.target.value)
     let name = e.target.name
@@ -36,6 +36,8 @@ for (let i = 0; i < tempInput.length; i++) {
     }
   })
 }
+
+progress.addEventListener('')
 
 clear.addEventListener(
   'click',
