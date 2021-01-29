@@ -1,6 +1,7 @@
 const topDisplay = document.getElementById('top-display')
 const calcInput = document.getElementById('calc-input')
-const calcButton = document.querySelectorAll('.calc-button')
+const numbers = document.querySelectorAll('.num')
+const signs = document.querySelectorAll('.sign')
 const cancel = document.getElementById('cancel')
 const divide = document.getElementById('divide')
 const seven = document.getElementById('seven')
@@ -21,26 +22,12 @@ const equal = document.getElementById('equal')
 
 // RESET CALULATOR INPUT
 cancel.addEventListener('click', () => {
-  calcInput.value = '0'
-  topDisplay.innerHTML = ''
+   calcInput.value = '0'
+   topDisplay.innerHTML = ''
 })
 
 // KEY ACTIONS
-for (let i = 0; i < calcButton.length; i++) {
-  calcButton[i].addEventListener('click', () => {
-    const signs = [' / ', ' x ', ' - ', ' + ']
-    if (
-      signs.indexOf(calcButton[i].value) > -1 &&
-      calcInput.value.length >= 1
-    ) {
-      topDisplay.innerHTML = calcInput.value + calcButton[i].value
-    } else {
-      if (calcInput.value === '0' && calcButton[i].value !== '.') {
-        calcInput.value = ''
-        calcInput.value = calcInput.value + calcButton[i].value
-      } else {
-        calcInput.value = calcInput.value + calcButton[i].value
-      }
-    }
-  })
+for (let n = 0; n < numbers.length; n++) {
+   let nums = numbers[n]
+   nums.addEventListener('click', () => {})
 }
