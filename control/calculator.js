@@ -34,9 +34,9 @@ for (let s = 0; s < signs.length; s++) {
    let symbols = signs[s]
 
    symbols.addEventListener('click', () => {
-      // console.log(symbols.value)
-      // console.log(calcInput.value)
-      topDisplay.innerHTML = calcInput.value + symbols.value
-      console.log(topDisplay.value)
+      if (calcInput.value && topDisplay.innerHTML === '') {
+         topDisplay.innerHTML = calcInput.value + symbols.value
+         calcInput.value = ''
+      }
    })
 }
