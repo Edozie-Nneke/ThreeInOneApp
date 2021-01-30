@@ -7,36 +7,58 @@ const equal = document.getElementById('equal')
 
 // RESET CALULATOR INPUT
 cancel.addEventListener('click', () => {
-   calcInput.value = '0'
-   topDisplay.innerHTML = ''
+  calcInput.value = '0'
+  topDisplay.innerHTML = ''
 })
 
 // KEY ACTIONS FOR NUMBERS
 for (let n = 0; n < numbers.length; n++) {
-   let nums = numbers[n]
-   let digits = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
+  let nums = numbers[n]
+  let digits = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
 
-   nums.addEventListener('click', () => {
-      if (nums.value === '0' && calcInput.value === '0') {
-         calcInput.value = ''
-         calcInput.value = calcInput.value + nums.value
-      } else if (digits.indexOf(nums.value) > -1 && calcInput.value === '0') {
-         calcInput.value = ''
-         calcInput.value = calcInput.value + nums.value
-      } else {
-         calcInput.value = calcInput.value + nums.value
-      }
-   })
+  nums.addEventListener('click', () => {
+    if (nums.value === '0' && calcInput.value === '0') {
+      calcInput.value = ''
+      calcInput.value = calcInput.value + nums.value
+    } else if (digits.indexOf(nums.value) > -1 && calcInput.value === '0') {
+      calcInput.value = ''
+      calcInput.value = calcInput.value + nums.value
+    } else if (calcInput.value === '' && topDisplay.innerHTML.length >= 1 && nums.value === '.') {
+      calcInput.value = '0' + nums.value
+    } else {
+      calcInput.value = calcInput.value + nums.value
+    }
+  })
 }
 
 // KEY ACTIONS FOR SIGNS
 for (let s = 0; s < signs.length; s++) {
-   let symbols = signs[s]
+  let symbols = signs[s]
 
-   symbols.addEventListener('click', () => {
-      if (calcInput.value && topDisplay.innerHTML === '') {
-         topDisplay.innerHTML = calcInput.value + symbols.value
-         calcInput.value = ''
-      }
-   })
+  symbols.addEventListener('click', () => {
+    if (calcInput.value && topDisplay.innerHTML === '') {
+      topDisplay.innerHTML = calcInput.value + symbols.value
+      calcInput.value = ''
+    }
+  })
 }
+
+//KEY ACTION FOR EQUAL BUTTON
+equal.addEventListener('click', () => {
+  if (topDisplay.innerHTML.endsWith(' + ')) {
+    calcInput.value = parseFloat(topDisplay.innerHTML) + parseFloat(calcInput.value)
+    topDisplay.innerHTML = ''
+  }
+  if (topDisplay.innerHTML.endsWith(' - ')) {
+    calcInput.value = parseFloat(topDisplay.innerHTML) - parseFloat(calcInput.value)
+    topDisplay.innerHTML = ''
+  }
+  if (topDisplay.innerHTML.endsWith(' x ')) {
+    calcInput.value = parseFloat(topDisplay.innerHTML) * parseFloat(calcInput.value)
+    topDisplay.innerHTML = ''
+  }
+  if (topDisplay.innerHTML.endsWith(' / ')) {
+    calcInput.value = parseFloat(topDisplay.innerHTML) / parseFloat(calcInput.value)
+    topDisplay.innerHTML = ''
+  }
+})
