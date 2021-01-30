@@ -1,246 +1,247 @@
 /* ================= GENERAL CSS =================== */
 * {
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-   background: #393e46;
-   color: #f6f6f6;
-   width: 100%;
-   height: 100vh;
-   display: flex; /*using css flex box*/
-   justify-content: center; /*center its contents*/
-   align-items: center;
+  background: #393e46;
+  color: #f6f6f6;
+  width: 100%;
+  height: 100vh;
+  display: flex; /*using css flex box*/
+  justify-content: center; /*center its contents*/
+  align-items: center;
 }
 
 .container {
-   width: 85%;
-   display: flex;
-   justify-content: space-between;
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .section {
-   /* border: 1px solid white; */
-   border-radius: 10px;
-   width: 400px;
-   height: 600px;
+  border-radius: 10px;
+  width: 400px;
+  height: 600px;
 }
 
 /* ============= TEMPERATURE CONVERTER ================ */
 .temp-converter {
-   background-color: #f08a5d;
-   display: grid;
-   grid-template-columns: 1fr;
-   grid-template-rows: repeat(4, 1fr);
+  background-color: #f08a5d;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 1fr);
 }
 
 .temp-header {
-   border-bottom: 1px solid white;
-   margin: auto;
+  border-bottom: 1px solid white;
+  margin: auto;
 }
 
 .input-div {
-   display: grid;
-   grid-template-columns: 1fr;
-   grid-gap: 10px;
-   grid-row: 2/4;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+  grid-row: 2/4;
 }
 
 .temp-input {
-   width: 80%;
-   height: 50px;
-   border-radius: 10px;
-   border: none;
-   outline: none;
-   margin: auto;
-   padding-left: 16px;
-   font-size: 1.2rem;
-   font-weight: 600;
+  width: 80%;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  margin: auto;
+  padding-left: 16px;
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 
 #clear {
-   width: 80%;
-   height: 50px;
-   margin: auto;
-   outline: none;
-   box-shadow: 3px 3px 5px #ccc;
-   border-radius: 10px;
-   font-size: 1.2rem;
-   font-weight: 600;
-   background-color: #f9ed69;
+  width: 80%;
+  height: 50px;
+  margin: auto;
+  outline: none;
+  box-shadow: 3px 3px 5px #ccc;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  background-color: #f9ed69;
 }
 
 /* ================== BMI CALCULATOR ================= */
 .bmi-calculator {
-   display: grid;
-   background-color: #8ef6e4;
-   color: #1b262c;
-   grid-template-rows: 1fr 2fr 1fr;
-   grid-gap: 20px;
+  display: grid;
+  background-color: #8ef6e4;
+  color: #1b262c;
+  grid-template-rows: 1fr 2fr 1fr;
+  grid-gap: 20px;
 }
 
 .bmi-header {
-   border-bottom: 1px solid #1b262c;
-   margin: auto;
+  border-bottom: 1px solid #1b262c;
+  margin: auto;
 }
 
 .bmi-form {
-   display: grid;
-   grid-template-rows: auto 1fr;
+  display: grid;
+  grid-template-rows: auto 1fr;
 }
 
 .metric-value-input {
-   display: grid;
-   grid-template-columns: repeat(2, 1fr);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .metric-selector {
-   height: 50px;
-   margin: auto;
-   padding-left: 16px;
-   font-size: 1.2rem;
-   font-weight: 600;
+  height: 50px;
+  margin: auto;
+  padding-left: 16px;
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 
 #weight {
-   width: 80%;
-   margin-left: 10%;
+  width: 80%;
+  margin-left: 10%;
 }
 
 #height {
-   width: 80%;
-   margin-top: 20px;
-   margin-left: 10%;
+  width: 80%;
+  margin-top: 20px;
+  margin-left: 10%;
 }
 
 #heightInInches {
-   display: none;
+  display: none;
 }
 
 .metric-value {
-   height: 50px;
-   border-radius: 10px;
-   border: none;
-   outline: none;
-   /* margin: auto; */
-   padding-left: 16px;
-   font-size: 1.2rem;
-   font-weight: 600;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  padding-left: 16px;
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 
 .button-display {
-   display: flex;
-   width: 80%;
-   margin-left: 10%;
+  display: flex;
+  width: 80%;
+  margin-left: 10%;
 }
 
 #bmi-button {
-   width: 70%;
-   height: 50px;
-   margin-top: 20px;
-   outline: none;
-   font-size: 1.2rem;
-   font-weight: 600;
-   background-color: #62d2a2;
+  width: 70%;
+  height: 50px;
+  margin-top: 20px;
+  outline: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  background-color: #62d2a2;
 }
 
 #display-bmi {
-   width: 30%;
-   height: 50px;
-   margin-top: 20px;
-   padding: 15px;
-   font-size: 1.1rem;
-   font-weight: 600;
+  width: 30%;
+  height: 50px;
+  margin-top: 20px;
+  padding: 15px;
+  font-size: 1.1rem;
+  font-weight: 600;
 }
 
 #clear-button {
-   width: 80%;
-   height: 50px;
-   margin-left: 10%;
-   margin-top: 50px;
-   outline: none;
-   background-color: #9896f1;
-   font-weight: 600;
-   box-shadow: 3px 3px 5px #ccc;
-   border-radius: 10px;
-   font-size: 1.2rem;
+  width: 80%;
+  height: 50px;
+  margin-left: 10%;
+  margin-top: 50px;
+  outline: none;
+  background-color: #9896f1;
+  font-weight: 600;
+  box-shadow: 3px 3px 5px #ccc;
+  border-radius: 10px;
+  font-size: 1.2rem;
 }
 
 .bmi-footer {
+  /* WILL BE USED TO DISPLAY
+    BORDER COLORS FOR DIFFERENT 
+    BMI VALUES */
 }
 
 #display-output {
-   width: 90%;
-   margin: 0 auto;
-   font-size: 1rem;
-   font-weight: 600;
-   padding: 10px;
+  width: 90%;
+  margin: 0 auto;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 10px;
 }
 
 /* ==================== SIMPLE CALCULATOR ==================*/
 .calculator {
-   display: grid;
-   grid-template-rows: repeat(4, 1fr);
-   background-color: #930077;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  background-color: #930077;
 }
 
 .calc-header {
-   margin: auto;
-   border-bottom: 1px solid #ffffff;
+  margin: auto;
+  border-bottom: 1px solid #ffffff;
 }
 
 .calc-body {
-   grid-row: 2/5;
-   position: relative;
-   width: 100%;
-   margin: auto;
+  grid-row: 2/5;
+  position: relative;
+  width: 100%;
+  margin: auto;
 }
 
 #top-display {
-   position: absolute;
-   color: #1b262c;
-   top: 5px;
-   right: 15px;
-   font-weight: 600;
-   opacity: 0.6;
+  position: absolute;
+  color: #1b262c;
+  top: 5px;
+  right: 15px;
+  font-weight: 600;
+  opacity: 0.6;
 }
 
 #calc-input {
-   width: 100%;
-   height: 75px;
-   text-align: right;
-   padding-right: 10px;
-   font-size: 1.5rem;
-   font-weight: 600;
-   color: #930077;
-   border-radius: 5px;
-   margin-bottom: 2px;
+  width: 100%;
+  height: 75px;
+  text-align: right;
+  padding-right: 10px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #930077;
+  border-radius: 5px;
+  margin-bottom: 2px;
 }
 
 .calc-button-container {
-   display: grid;
-   grid-template-columns: repeat(4, 1fr);
-   grid-auto-rows: minmax(72px, auto);
-   grid-gap: 2px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(72px, auto);
+  grid-gap: 2px;
 }
 
 #cancel {
-   grid-column: 1/4;
-   font-size: 1.5rem;
-   color: #930077;
-   border-radius: 5px;
-   outline: none;
+  grid-column: 1/4;
+  font-size: 1.5rem;
+  color: #930077;
+  border-radius: 5px;
+  outline: none;
 }
 
 #equal {
-   grid-column: 3/5;
+  grid-column: 3/5;
 }
 
 .calc-button {
-   font-size: 1.5rem;
-   color: #930077;
-   border-radius: 5px;
-   outline: none;
+  font-size: 1.5rem;
+  color: #930077;
+  border-radius: 5px;
+  outline: none;
 }
