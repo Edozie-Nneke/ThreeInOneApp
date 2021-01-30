@@ -15,6 +15,7 @@ cancel.addEventListener('click', () => {
 for (let n = 0; n < numbers.length; n++) {
    let nums = numbers[n]
    let digits = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
+
    nums.addEventListener('click', () => {
       if (nums.value === '0' && calcInput.value === '0') {
          calcInput.value = ''
@@ -25,5 +26,17 @@ for (let n = 0; n < numbers.length; n++) {
       } else {
          calcInput.value = calcInput.value + nums.value
       }
+   })
+}
+
+// KEY ACTIONS FOR SIGNS
+for (let s = 0; s < signs.length; s++) {
+   let symbols = signs[s]
+
+   symbols.addEventListener('click', () => {
+      // console.log(symbols.value)
+      // console.log(calcInput.value)
+      topDisplay.innerHTML = calcInput.value + symbols.value
+      console.log(topDisplay.value)
    })
 }
