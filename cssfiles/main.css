@@ -230,7 +230,8 @@ body {
 #cancel {
   grid-column: 1/4;
   font-size: 1.5rem;
-  color: #930077;
+  background-color: #930077;
+  color: #f6f6f6;
   border-radius: 5px;
   outline: none;
 }
@@ -241,7 +242,48 @@ body {
 
 .calc-button {
   font-size: 1.5rem;
-  color: #930077;
+  background-color: #930077;
+  color: #f6f6f6;
   border-radius: 5px;
   outline: none;
+}
+
+button:hover {
+  font-size: 1.7rem;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    background: #393e46;
+    color: #f6f6f6;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    width: 85%;
+    height: 100vh;
+    scroll-snap-type: y mandatory;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+  }
+
+  .section {
+    border-radius: 10px;
+    width: 80%;
+    height: 500px;
+    margin: auto;
+    scroll-snap-align: center;
+    /* margin-top: 20px; */
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+  body {
+  }
 }

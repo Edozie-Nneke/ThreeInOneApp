@@ -13,6 +13,7 @@ clearBtn.addEventListener('click', () => {
   weight.value = ''
   height.value = ''
   displayOutput.innerHTML = ''
+  display_bmi.innerHTML = ''
 })
 
 // EVENTLISTENERS FOR RADIO BUTTONS
@@ -94,8 +95,7 @@ function outCome(bmiValue) {
     displayOutput.innerHTML = `Your BMI is: ${bmiValue.toFixed(2)}
          and this is above 29.9 and puts you at risk of OBESITY`
   } else {
-    displayOutput.innerHTML = `You have not inputed a value for your
-    your weight and height. Please input a value or select your prefered
+    displayOutput.innerHTML = `You have not inputed a value for your weight and height. Please input a value or select your prefered
     metric and then input corresponding values.`
   }
 }
