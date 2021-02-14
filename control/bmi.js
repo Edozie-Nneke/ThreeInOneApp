@@ -12,6 +12,7 @@ const clearBtn = document.getElementById('clear-button')
 clearBtn.addEventListener('click', () => {
   weight.value = ''
   height.value = ''
+  heightInInches.value = ''
   displayOutput.innerHTML = ''
   display_bmi.innerHTML = ''
 })
