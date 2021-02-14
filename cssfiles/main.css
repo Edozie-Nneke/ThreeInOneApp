@@ -275,7 +275,7 @@ button:hover {
 
   .section {
     border-radius: 10px;
-    width: 80%;
+    width: 75%;
     height: 500px;
     margin: auto;
     scroll-snap-align: center;
@@ -283,7 +283,26 @@ button:hover {
   }
 }
 
-@media screen and (max-width: 1024px) and (min-width: 769px) {
+@media screen and (max-width: 1400px) and (min-width: 769px) {
   body {
+    background: #393e46;
+    color: #f6f6f6;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+  }
+
+  .section {
+    border-radius: 10px;
+    width: 75%;
   }
 }
